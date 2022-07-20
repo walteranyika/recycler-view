@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(private val usersList: List<User>) :
@@ -17,6 +18,10 @@ class CustomAdapter(private val usersList: List<User>) :
         val user = usersList[position]
         holder.txtEmail.text = user.email
         holder.txtName.text = user.name
+
+        holder.itemView.setOnClickListener {
+            Toast.makeText(holder.itemView.context, user.name, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun getItemCount(): Int {
