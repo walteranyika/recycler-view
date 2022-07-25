@@ -23,19 +23,6 @@ class CustomAdapter(private val usersList: List<User>) :
         holder.itemView.setOnClickListener {
             Toast.makeText(holder.itemView.context, user.name, Toast.LENGTH_SHORT).show()
         }
-
-        /*holder.txtName.setOnClickListener {
-            val popupMenu = PopupMenu(holder.txtName.context, holder.txtName)
-            popupMenu.menuInflater.inflate(R.menu.pop_up_menu, popupMenu.menu)
-            popupMenu.setOnMenuItemClickListener { menuItem ->
-                when (menuItem.itemId) {
-                    R.id.item_delete-> {
-                        Toast.makeText(holder.itemView.context, "Deleting", Toast.LENGTH_SHORT).show()
-                    }
-                }
-                true
-            }
-        }*/
     }
 
     override fun getItemCount(): Int {
